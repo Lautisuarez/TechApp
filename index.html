@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechApp</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <div class="contenedor">
+            <a href="./index.html">
+                <img src="./img/logo.svg" alt="Logo de techapp" id="logo">
+            </a>
+            <!-- MENÚ DE NAVEGACIÓN -->
+            <nav>
+                <ul class="navegacion">
+                    <li><a href="./index.html" id="activo">Inicio</a></li>
+                    <li><a href="./paginas/productos.html">Productos</a></li>
+                    <li><a href="./paginas/servicios.html">Servicios</a></li>
+                    <li><a href="./paginas/nosotros.html">Nosotros</a></li>
+                    <li><a href="./paginas/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <h1>Tech<span class="bold">App</span></h1>
+    </header>
+    <!-- SECCION NOVEDADES -->
+    <section class="contenedor">
+        <h2 class="dark-red">Novedades</h2>
+        <div class="novedades">
+            <div>
+                <article class="producto-novedades">
+                    <a href="#">
+                        <img src="./img/perifericos.jpg" alt="Producto de perifericos" width="300" height="250px">
+                    </a>
+                    <div class="detalles">
+                        <h3>Perifericos</h3>
+                        <p>¡No te pierdas lo nuevo en perifericos!</p>
+                        <a class="btn btn-principal" href="#">Ver más</a> 
+                    </div>
+                </article>
+                <article class="producto-novedades">
+                    <a href="#">
+                        <img src="./img/notebook.jpg" alt="Producto de notebook" width="300" height="250px">
+                    </a>
+                    <div class="detalles">
+                        <h3>Notebook</h3>
+                        <p>¡Mira estas notebooks de últimos modelos!</p>
+                        <a class="btn btn-principal" href="#">Ver más</a> 
+                    </div>
+                </article>
+            </div>
+            <div>
+                <article class="producto-novedades">
+                    <a href="#">
+                        <img src="./img/watch.jpg" alt="Producto de reloj inteligente" width="300" height="250px">
+                    </a>
+                    <div class="detalles">
+                        <h3>SmartWatch</h3>
+                        <p>¡Lo último es relojes inteligentes!</p>
+                        <a class="btn btn-principal" href="#">Ver más</a> 
+                    </div>
+                </article>
+                <article class="producto-novedades">
+                    <a href="#">
+                        <img src="./img/auriculares .jpg" alt="Producto de auriculares" width="300" height="250px">
+                    </a>
+                    <div class="detalles">
+                        <h3>Auriculares Inalambricos</h3>
+                        <p>¡Lo bueno de escuchar música sin cables!</p>
+                        <a class="btn btn-principal" href="#">Ver más</a> 
+                    </div>
+                </article>
+            </div>
+            <article class="producto-novedades">
+                <a href="#">
+                    <img src="./img/drones.jpg" alt="Producto sobre drones" width="350" height="631">
+                </a>
+                <div class="detalles">
+                    <h3>Drones</h3>
+                    <p>¡Los drones ya están llegando!</p>
+                    <a class="btn btn-principal" href="#">Ver más</a> 
+                </div>
+            </article>
+        </div>
+    </section>
+    <!-- SECCION NEWSLETTERS -->
+    <div class="newsletter">
+        <div class="contenedor">
+            <h2 class="dark-red">Suscríbete a nuestro newsletter para estar al día</h2>
+            <form action="GET" class="form-newsletter">
+                <div>
+                    <label for="email">Correo:</label>
+                    <input type="email" id='email' class="input" placeholder="email" required>
+                </div>
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id='nombre' class="input" placeholder="nombre" required>
+                </div>
+                <input class="btn btn-principal" type="submit" value="Suscribirse">
+            </form>
+        </div>
+    </div>
+    <!-- SECCION CONÓCENOS MÁS -->
+    <div class="conocenos contenedor">
+        <h2 class="dark-red">Conócenos más</h2>
+        <div class="seccion-conocenos">
+            <a href="#">
+                <img src="./img/conocenos.jpg" alt="Foto sobre nosotros" width="auto" height="400">
+            </a>
+            <div class="detalles" id="detalles-conocenos">
+                <h3>Nuestra historia</h3>
+                <p>Conoce nuestra historia, horarios y donde estamos en este mundo haciendo click al boton de abajo.</p>
+                <a class="btn btn-principal" href="./paginas/nosotros.html">Sobre TechApp</a>
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <footer>
+        <p><strong>Desarrollado por:</strong> Lautaro Suárez</p>
+        <a href="./index.html">Tech<span class="bold">App</span>&copy;</a>
+        <div>
+            <p><strong>Nuestras redes:</strong></p>
+            <!-- Íconos de redes sociales -->
+        </div>
+    </footer>
+</body>
+</html>

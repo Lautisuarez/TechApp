@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechApp</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="../index.html">
+            <img src="../img/logo2.svg" alt="Logo de techapp" id="logo">
+        </a>
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <nav>
+            <ul class="navegacion">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./productos.html">Productos</a></li>
+                <li><a href="./servicios.html" id="activo">Servicios</a></li>
+                <li><a href="./nosotros.html">Nosotros</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CUERPO -->
+    <div class="contenedor service">
+        <h1 class="dark-red">Nuestros Servicios</h1>
+        <div>
+            <div class="detalles">
+                <h3>Reparacion de celulares</h3>
+                <form action="GET" class="form-service">
+                    <div>
+                        <label for="so">Sistema Operativo:</label>
+                        <select name="so" id="so" required>
+                            <option value="">-- Seleccione uno --</option>
+                            <option value="apple">Apple</option>
+                            <option value="android">Android</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div id="type-service">
+                        <label for="servicio">Servicio:</label>
+                        <div id="detalle-service">
+                            <div>
+                                <label for="pantalla">Pantalla</label>
+                                <input type="checkbox" name="pantalla" id="pantalla">
+                            </div>
+                            <div>
+                                <label for="camara">Cámara</label>
+                                <input type="checkbox" name="camara" id="camara">
+                            </div>
+                            <div>
+                                <label for="microfono">Micrófono</label>
+                                <input type="checkbox" name="microfono" id="microfono">
+                            </div>
+                            <div>
+                                <label for="audio">Audio</label>
+                                <input type="checkbox" name="audio" id="audio">
+                            </div>
+                            <div>
+                                <label for="pin">Pin de carga</label>
+                                <input type="checkbox" name="pin" id="pin">
+                            </div>
+                            <div>
+                                <label for="bateria">Batería</label>
+                                <input type="checkbox" name="bateria" id="bateria">
+                            </div>
+                            <div>
+                                <label for="otro">Otro</label>
+                                <input type="checkbox" name="otro" id="otro">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="email">Correo:</label>
+                        <input type="email" id="email" placeholder="e-mail" class="input" required>
+                    </div>
+                    <div>
+                        <label for="tel">Telefono:</label>
+                        <input type="tel" id="tel" placeholder="telefono" class="input">  
+                    </div>
+                    <div>
+                        <label for="comen">Comentarios:</label>
+                        <textarea name="comen" id="comen" placeholder="Agregue comentarios" rows="5" class="input"></textarea>
+                    </div>
+                    <div class="right">
+                        <input class="btn btn-principal" type="submit" value="Enviar">
+                    </div>
+                </form>
+            </div>
+            <div class="detalles" id="other-service">
+                <h3>Otras reparaciones</h3>
+                <p>Para reparaciones sobre computadoras, consolas, etc.</p>
+                <a class="btn btn-principal" href="./contacto.html">Contáctanos</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECCION FOOTER -->
+    <footer>
+        <p><strong>Desarrollado por:</strong> Lautaro Suárez</p>
+        <a href="../index.html">Tech<span class="bold">App</span>&copy;</a>
+        <div>
+            <p><strong>Nuestras redes:</strong></p>
+            <!-- Íconos de redes sociales -->
+        </div>
+    </footer>
+</body>
+</html>
