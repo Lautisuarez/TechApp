@@ -37,6 +37,7 @@ body {
     cursor: pointer; 
     font-size: 1.5rem;
     border-radius: 1rem;
+    text-align: center;
 }
 .btn-principal{
     background-color: #630000;
@@ -74,7 +75,7 @@ body {
 header {
     background-color: #1B1717;
     padding: 1rem 3rem;
-    display: flex; /* En este caso utilizo flex para que el menu quede bien posicionado (no me parecía conveniente usar display: inline) */
+    display: flex; 
     justify-content: space-between;
     align-items: center;
 }
@@ -121,7 +122,7 @@ header#header h1 {
 }
 .navegacion li a:hover {
     color: #EEEBDD;
-    transition: 0.5s all; /* Le agregamos un efecto 'delay' a la transicion cuando le pasamos el mouse por en cima */
+    transition: 0.5s all; 
 }
 .navegacion li {
     margin-right: 3rem;
@@ -156,7 +157,7 @@ footer a{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 2rem; /* Separa elementos en caso de que se junten */
+    gap: 2rem; 
 }
 .novedades div {
     display: flex;
@@ -166,7 +167,7 @@ footer a{
 .producto-novedades a img{
     border-radius: 2rem;
     border: 1px outset #1B1717;
-    box-shadow: 5px 4px 13px -3px rgba(27,23,23,0.81); /* Generamos una especie de flotante agregandole sombreado atras */
+    box-shadow: 5px 4px 13px -3px rgba(27,23,23,0.81); 
 }
 
 /* NEWSLETTERS */
@@ -181,7 +182,7 @@ footer a{
 .newsletter div h2{
     font-size: 4rem;
     text-align: center;
-    text-shadow: 2px 2px 2px #1B1717; /* Agregamos sombreado al texto */
+    text-shadow: 2px 2px 2px #1B1717; 
 }
 .form-newsletter {
     text-align: center;
@@ -226,19 +227,35 @@ div#detalles-conocenos p{
 /* ---------- PÁGINA PRODUCTOS ---------- */
 
 /* PRODUCTOS */
-.table-product {
-    width: 70%;
-    margin: 3rem auto;
+.productos {
+    display: grid;
+    grid-template-rows: auto;
+    row-gap: 2rem;
 }
-tr.img-product a{
-    margin-right: 3rem;
+.productos>div{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-items: center;
+    align-items: center;
 }
-tr.img-product a img{
-    border-radius: 1rem;
+.productos>div .detalles {
+    max-width: 70rem; /* Establecemos un tamaño horizontal máximo */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 2fr 1fr;
+    align-items: center;
 }
-tr td.detalles{
-    text-align: center;
+
+.productos>div .detalles h3{
+    grid-area: 1 / 1 / 1 / 4;
 }
+.productos>div .detalles p {
+    grid-area: 2 / 1 / 2 / 4;
+}
+.productos>div .detalles a {
+    grid-area: 3 / 3 / 3 / 4;
+}
+
 
 /* ---------- PÁGINA SERVICIOS ---------- */
 
@@ -247,7 +264,7 @@ tr td.detalles{
     margin: 2rem auto;
 }
 .form-service {
-    width: 70%;
+    width: 30rem;
     margin: 3rem auto;
 }
 .form-service div {
@@ -268,6 +285,7 @@ div#detalle-service div label {
 }
 .form-service div#type-service div{
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
 }
