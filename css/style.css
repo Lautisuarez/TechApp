@@ -15,7 +15,7 @@ body {
 /* UTILIDADES */
 .dark-red{
     color: #630000;
-    font-size: 3rem;
+    font-size: 2.5rem;
     padding: 3rem 0;
 }
 .bold {
@@ -33,9 +33,9 @@ body {
     text-decoration: none;
     border: 2px solid #630000; 
     padding: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     cursor: pointer; 
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     border-radius: 1rem;
     text-align: center;
 }
@@ -51,14 +51,14 @@ body {
 }
 .detalles h3 {
     color: #810000;
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin: 1rem 0 .3rem 0;
 }
 .detalles p{
     color: #1B1717;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 1rem;
-    line-height: 2.2rem;
+    line-height: 2rem;
 }
 .input {
     background-color: #EEEBDD;
@@ -70,21 +70,46 @@ body {
     padding: 5px;
     width: 100%;
 }
+@media (min-width: 468px){
+    .btn {
+        padding: 1.2rem;
+        font-size: 1.5;
+    }
+    .detalles h3 {
+        font-size: 1.9rem;
+    }
+    .detalles p{
+        font-size: 1.5rem;
+    }
+}
 @media (min-width: 768px){
+    .dark-red {
+        font-size: 3rem;
+    }
     .contenedor { 
         width: 95%;
+    }
+    .btn {
+        margin-bottom: 2rem;
+    }
+    .detalles h3 {
+        font-size: 2rem;
+    }
+    .detalles p{
+        margin-bottom: 1rem;
+        line-height: 2.2rem;
     }
 }
 
 /* SECCION HEADER */
 header {
-    padding: 1rem;
+    padding: 2rem;
     background-color: #1B1717;
     display: flex; 
     justify-content: space-between;
     align-items: center;
 }
-header#header { /* Hago que la página principal tenga fondo de imagen pero sin modificar las demás páginas */
+header#header { /* Hacemos que la página principal tenga fondo de imagen pero sin modificar las demás páginas */
     background-color: transparent;
     background-image: url('../img/slider.jpg');
     background-size: cover;
@@ -106,7 +131,7 @@ header#header h1 {
     font-size: 5rem;
 }
 #logo{
-    width: 20%;
+    width: 15%;
 }
 #logo img { /* Hacemos que la imagén se adapte al tamaño del padre */
     width: 100%;
@@ -164,7 +189,7 @@ header#header h1 {
         row-gap: 5rem;
         justify-content: center;
         align-items: center;
-        background-color: rgba(27, 23, 23, .8);
+        background-color: rgba(27, 23, 23, .9);
     }
 }
 
@@ -181,10 +206,19 @@ header#header h1 {
     }
     .navegacion li a {
         margin-right: 5rem;
-        font-size: 2.3rem;
+        font-size: 2rem;
     }
     .navegacion li:nth-child(5) a {
         margin-right: 0rem;
+    }
+}
+@media (min-width: 1024px){
+    #logo {
+        width: 8%;
+    }
+    .navegacion li a {
+        margin-right: 5rem;
+        font-size: 2.3rem;
     }
 }
 
@@ -198,18 +232,40 @@ footer {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    row-gap: 1rem;
+    row-gap: 2rem;
 }
 footer p{
     font-size: 1.5rem;
     font-style: italic;
 }
-footer a{
+footer>a{
     text-decoration: none;
     color: #630000;
     font-size: 2rem;
 }
+.redes {
+    display: flex;
+    align-items: center;
+}
+.redes a {
+    font-size: 3rem;
+    color: #EEEBDD;
+    margin-left: 1.5rem;
+    transition: all .5s;
+}
+.redes a:hover {
+    color: #79776e;
+    transform: scale(1.1);
+}
 @media (min-width: 468px){
+    footer {
+        padding: 2rem;
+        margin-top: 1rem;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media (min-width: 768px){
     footer {
         padding: 2rem;
         margin-top: 1rem;
@@ -339,28 +395,43 @@ div#detalles-conocenos p{
     grid-template-rows: auto;
     row-gap: 2rem;
 }
-.productos>div{
+.detalle-producto{
     display: grid;
     grid-template-columns: 1fr 2fr;
+    column-gap: 2rem;
     justify-items: center;
     align-items: center;
 }
-.productos>div .detalles {
+.detalle-producto .detalles {
     max-width: 70rem; /* Establecemos un tamaño horizontal máximo */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 2fr 1fr;
     align-items: center;
 }
+.img-producto>a>img {
+    border-radius: 2rem;
+    width: 150px;
+    height: auto;
+}
 
-.productos>div .detalles h3{
+.detalle-producto .detalles h3{
     grid-area: 1 / 1 / 1 / 4;
 }
-.productos>div .detalles p {
+.detalle-producto .detalles p {
     grid-area: 2 / 1 / 2 / 4;
 }
-.productos>div .detalles a {
-    grid-area: 3 / 3 / 3 / 4;
+.detalle-producto .detalles a {
+    grid-area: 3 / 1 / 3 / 4;
+}
+
+@media (min-width: 768px){ /* Media Querie general para la pagina productos */
+    .img-producto>a>img {
+        width: 200px;
+    }
+    .detalle-producto .detalles a {
+        grid-area: 3 / 3 / 3 / 4;
+    }
 }
 
 
@@ -397,13 +468,18 @@ div#detalle-service div label {
     align-items: center;
 }
 div.right input {
-    width: 20%;
+    width: 100%;
 }
 div.detalles#other-service {
     margin-bottom: 5rem;
 }
 div.detalles#other-service p {
     margin-bottom: 2rem;
+}
+@media (min-width: 768px){
+    div.right input {
+        width: 40%;
+    }
 }
 
 /* ---------- PÁGINA NOSOTROS ---------- */
@@ -415,19 +491,36 @@ div.detalles#other-service p {
     margin: 12rem 0;
 }
 .nosotros img {
-    border-radius: 2rem;
+    display: none;
 }
 .nosotros>div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    row-gap: 2rem;
 }
 .nosotros>div #detalle-nosotros {
     display: flex;
     justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 3rem;
 }
 .nosotros>div>div.detalles{
     text-align: center;
+}
+
+@media (min-width: 768px){
+    .nosotros>div #detalle-nosotros {
+        flex-direction: row;
+        column-gap: 3rem;
+    }
+}
+@media (min-width: 1024px){
+    .nosotros img {
+        border-radius: 2rem;
+        display: block;
+    }
 }
 
 /* ---------- PÁGINA CONTACTO ---------- */
@@ -438,10 +531,11 @@ div.detalles#other-service p {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-direction: column;
 }
 .detalle-contacto {
     min-height: 600px;
-    min-width: 500px;
+    min-width: 400px;
     padding: 3rem;
     border: 1px solid black;
     border-radius: 2rem;
@@ -456,7 +550,7 @@ div.detalles#other-service p {
     padding: 3rem;
     border-radius: 2rem;
     min-height: 600px;
-    min-width: 500px;
+    min-width: 400px;
     margin: 3rem 0;
 }
 .form-contact legend {
@@ -469,4 +563,18 @@ div.detalles#other-service p {
 .form-contact>div>label {
     font-size: 1.5rem;
     margin-right: 2rem;
+    font-weight: bold;
+}
+@media (min-width: 768px){
+    .detalle-contacto {
+        min-width: 500px;
+    }
+    .form-contact {
+        min-width: 500px;
+    }
+}
+@media (min-width: 1024px){
+    .contacto {
+        flex-direction: row;
+    }
 }

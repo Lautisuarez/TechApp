@@ -11,11 +11,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 <body>
     <header>
-        <a href="../index.html">
-            <img src="../img/logo2.svg" alt="Logo de techapp" id="logo">
+        <a href="../index.html" id="logo">
+            <img src="../img/logo2.svg" alt="Logo de techapp">
         </a>
         <!-- MENÚ DE NAVEGACIÓN -->
         <nav>
@@ -27,6 +29,11 @@
                 <li><a href="./contacto.html">Contacto</a></li>
             </ul>
         </nav>
+        <div class="menuHamburguesa">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
     </header>
 
     <!-- CUERPO -->
@@ -106,11 +113,16 @@
     <!-- SECCION FOOTER -->
     <footer>
         <p><strong>Desarrollado por:</strong> Lautaro Suárez</p>
-        <a href="../index.html">Tech<span class="bold">App</span>&copy;</a>
-        <div>
+        <a href="./index.html">Tech<span class="bold">App</span>&copy;</a>
+        <div class="redes">
             <p><strong>Nuestras redes:</strong></p>
-            <!-- Íconos de redes sociales -->
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
         </div>
     </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
 </body>
 </html>

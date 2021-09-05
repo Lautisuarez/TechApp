@@ -9,13 +9,15 @@
     <link rel="stylesheet" href="../css/style.css">
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 <body>
     <header>
-        <a href="../index.html">
-            <img src="../img/logo2.svg" alt="Logo de techapp" id="logo">
+        <a href="../index.html" id="logo">
+            <img src="../img/logo2.svg" alt="Logo de techapp">
         </a>
         <!-- MENÚ DE NAVEGACIÓN -->
         <nav>
@@ -27,28 +29,33 @@
                 <li><a href="./contacto.html">Contacto</a></li>
             </ul>
         </nav>
+        <div class="menuHamburguesa">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
     </header>
 
     <!-- CUERPO -->
     <div class="contenedor">
         <h1 class="dark-red">Productos</h1>
         <div class="productos">
-            <div>
-                <div>
+            <div class="detalle-producto">
+                <div class="img-producto">
                     <a href="#">
-                        <img src="../img/iphone12.webp" alt="Producto de iphone" width="200" height="auto">
+                        <img src="../img/iphone12.webp" alt="Producto de iphone">
                     </a>
                 </div>
                 <div class="detalles">
                     <h3>Iphone 12 Pro 256gb</h3>
                     <p>
-                        El chip A14 Bionic es muy superior a cualquier otro chip de smartphone. El sistema de cámaras Pro te permite tomar fotos espectaculares con poca luz, y el iPhone 12 Pro lleva tu talento fotográfico mucho más allá. Además, el nuevo frente de Ceramic Shield es cuatro veces más resistente a las caídas. Descubre todo lo que el iPhone 12 Pro hace para llevarte al siguiente nivel.
+                        El chip A14 Bionic es muy superior a cualquier otro chip de smartphone. El sistema de cámaras Pro te permite tomar fotos espectaculares con poca luz, y el iPhone 12 Pro lleva tu talento fotográfico mucho más allá. <!-- Además, el nuevo frente de Ceramic Shield es cuatro veces más resistente a las caídas. Descubre todo lo que el iPhone 12 Pro hace para llevarte al siguiente nivel. -->
                     </p>
                     <a class="btn btn-principal" href="#">Ver mas</a>
                 </div>
             </div>
-            <div>
-                <div>
+            <div class="detalle-producto">
+                <div class="img-producto">
                     <a href="#">
                         <img src="../img/ps5.webp" alt="Producto de una PlayStation5" width="200" height="auto">
                     </a>
@@ -58,14 +65,14 @@
                     <p>
                         Se considera que esta consola es de las mejores dentro del mercado, dado que presenta una resolución de hasta 4K.
                         Además, el control DualSense para PS5 combina estilo y tecnología para que jugar sea más cómodo e interactivo para todos sus jugadores.
-                        Al contar con un procesador de 8 núcleos y uno gráfico, brinda una experiencia dinámica, respuestas ágiles, y transiciones fluidas de imágenes en alta definición.
-                        Por otro lado, tiene puerto USB y salida HDMI, que permiten conectar accesorios y cargar la batería de tu control mientras jugás.
+                        <!-- Al contar con un procesador de 8 núcleos y uno gráfico, brinda una experiencia dinámica, respuestas ágiles, y transiciones fluidas de imágenes en alta definición.
+                        Por otro lado, tiene puerto USB y salida HDMI, que permiten conectar accesorios y cargar la batería de tu control mientras jugás. -->
                     </p>
                     <a class="btn btn-principal" href="#">Ver mas</a>
                 </div>
             </div>
-            <div>
-                <div>
+            <div class="detalle-producto">
+                <div class="img-producto">
                     <a href="#">
                         <img src="../img/drone.webp" alt="Producto de un dron DJI" width="200" height="auto">
                     </a>
@@ -75,13 +82,13 @@
                     <p>
                         Su velocidad máxima es de 16 m/s, lo que te brindará la posibilidad de ahorrar tiempo en los desplazamientos.
                         A través de su cámara 4K obtendrás imágenes de gran resolución y calidad, y podrás registrar todo su recorrido. Gracias a su sistema GPS conseguirás alcanzar largas distancias y conquistar espacios con independencia.
-                        Incluye 3 baterías, que abastecerán al drone de la energía suficiente para funcionar. Al finalizar el trayecto, podrás recargarlas de manera fácil y cómoda.
+                        <!-- Incluye 3 baterías, que abastecerán al drone de la energía suficiente para funcionar. Al finalizar el trayecto, podrás recargarlas de manera fácil y cómoda. -->
                     </p>
                     <a class="btn btn-principal" href="#">Ver mas</a>
                 </div>
             </div>
-            <div>
-                <div>
+            <div class="detalle-producto">
+                <div class="img-producto">
                     <a href="#">
                         <img src="../img/macbook.webp" alt="Producto de macbook pro" width="200" height="auto">
                     </a>
@@ -89,7 +96,8 @@
                 <div class="detalles">
                     <h3>Macbook Pro M1</h3>
                     <p>
-                        El chip M1 de Apple redefine al Macbook Pro de 13 pulgadas. Viene con una CPU de 8 núcleos que permite un rendimiento óptimo en los flujos de trabajo más exigentes, como fotografía, programación y edición de video. La sorprendente GPU de 8 núcleos ofrece un rendimiento asombroso en procesos gráficos complejos y una experiencia de juego increíblemente fluida. El Neural Engine avanzado de 16 núcleos lleva el aprendizaje automático a un nuevo nivel en tus apps favoritas. Además, viene con memoria unificada que optimiza el rendimiento y la mayor duración de batería en un Mac: hasta 20 horas. Es el notebook Pro más popular de Apple, a un nivel de rendimiento mucho más pro.
+                        El chip M1 de Apple redefine al Macbook Pro de 13 pulgadas. Viene con una CPU de 8 núcleos que permite un rendimiento óptimo en los flujos de trabajo más exigentes, como fotografía, programación y edición de video. 
+                        <!-- La sorprendente GPU de 8 núcleos ofrece un rendimiento asombroso en procesos gráficos complejos y una experiencia de juego increíblemente fluida. El Neural Engine avanzado de 16 núcleos lleva el aprendizaje automático a un nuevo nivel en tus apps favoritas. Además, viene con memoria unificada que optimiza el rendimiento y la mayor duración de batería en un Mac: hasta 20 horas. Es el notebook Pro más popular de Apple, a un nivel de rendimiento mucho más pro. -->
                     </p>
                     <a class="btn btn-principal" href="#">Ver mas</a>
                 </div>
@@ -100,11 +108,16 @@
     <!-- FOOTER -->
     <footer>
         <p><strong>Desarrollado por:</strong> Lautaro Suárez</p>
-        <a href="../index.html">Tech<span class="bold">App</span>&copy;</a>
-        <div>
+        <a href="./index.html">Tech<span class="bold">App</span>&copy;</a>
+        <div class="redes">
             <p><strong>Nuestras redes:</strong></p>
-            <!-- Íconos de redes sociales -->
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
         </div>
     </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
 </body>
 </html>

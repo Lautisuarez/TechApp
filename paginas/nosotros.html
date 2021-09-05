@@ -11,11 +11,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 <body>
     <header>
-        <a href="../index.html">
-            <img src="../img/logo2.svg" alt="Logo de techapp" id="logo">
+        <a href="../index.html" id="logo">
+            <img src="../img/logo2.svg" alt="Logo de techapp">
         </a>
         <!-- MENÚ DE NAVEGACIÓN -->
         <nav>
@@ -27,6 +29,11 @@
                 <li><a href="./contacto.html">Contacto</a></li>
             </ul>
         </nav>
+        <div class="menuHamburguesa">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
     </header>
 
     <!-- CUERPO -->
@@ -36,7 +43,7 @@
             <div>
                 <div class="detalles">
                     <h3>Nuestra historia</h3>
-                    <p style="width: 70%; margin: 0 auto;">Lorem ipsum dolor sit amet consectetur adipiscing elit mi cum enim quam, parturient urna tincidunt vestibulum ac ultrices et fames imperdiet pellentesque, id aliquet litora ante lobortis ligula dictum sapien quisque facilisis. Varius porttitor morbi porta donec luctus arcu nunc rutrum, faucibus dapibus fermentum potenti maecenas aliquam parturient orci, quisque venenatis posuere euismod cubilia congue blandit. Ad magna neque ridiculus diam et fames hac laoreet parturient, mi class suspendisse gravida aptent natoque nunc potenti, cum aenean ultricies magnis purus pretium praesent nullam. Dictum lectus purus class aliquet taciti magna nam per ultrices libero sed, suspendisse bibendum mollis risus in hendrerit fermentum orci fames platea, dictumst ornare rhoncus lacus convallis dui non aliquam netus interdum. Ridiculus viverra nascetur senectus odio sagittis nisl nam libero class natoque mattis imperdiet dictum, a nunc purus curae nibh.</p> <!-- Cambiar luego por una historia -->
+                    <p style="width: 90%; margin: 0 auto;">Lorem ipsum dolor sit amet consectetur adipiscing elit mi cum enim quam, parturient urna tincidunt vestibulum ac ultrices et fames imperdiet pellentesque, id aliquet litora ante lobortis ligula dictum sapien quisque facilisis. Varius porttitor morbi porta donec luctus arcu nunc rutrum, faucibus dapibus fermentum potenti maecenas aliquam parturient orci, quisque venenatis posuere euismod cubilia congue blandit. Ad magna neque ridiculus diam et fames hac laoreet parturient, mi class suspendisse gravida aptent natoque nunc potenti, cum aenean ultricies magnis purus pretium praesent nullam. Dictum lectus purus class aliquet taciti magna nam per ultrices libero sed, suspendisse bibendum mollis risus in hendrerit fermentum orci fames platea, dictumst ornare rhoncus lacus convallis dui non aliquam netus interdum. Ridiculus viverra nascetur senectus odio sagittis nisl nam libero class natoque mattis imperdiet dictum, a nunc purus curae nibh.</p> <!-- Cambiar luego por una historia -->
                 </div>
                 <div id="detalle-nosotros">
                     <div class="detalles">
@@ -59,11 +66,16 @@
     <!-- FOOTER -->
     <footer>
         <p><strong>Desarrollado por:</strong> Lautaro Suárez</p>
-        <a href="../index.html">Tech<span class="bold">App</span>&copy;</a>
-        <div>
+        <a href="./index.html">Tech<span class="bold">App</span>&copy;</a>
+        <div class="redes">
             <p><strong>Nuestras redes:</strong></p>
-            <!-- Íconos de redes sociales -->
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
         </div>
     </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
 </body>
 </html>
