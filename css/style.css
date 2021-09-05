@@ -16,7 +16,7 @@ body {
 .dark-red{
     color: #630000;
     font-size: 3rem;
-    padding: 1rem 0;
+    padding: 3rem 0;
 }
 .bold {
     font-weight: 800;
@@ -25,7 +25,7 @@ body {
     text-align: right;
 }
 .contenedor { /* Lo utilizo para separar el contenido del borde del navegador */
-    width: 95%;
+    width: 90%;
     max-width: 150rem;
     margin: 0 auto;
 }
@@ -70,11 +70,16 @@ body {
     padding: 5px;
     width: 100%;
 }
+@media (min-width: 768px){
+    .contenedor { 
+        width: 95%;
+    }
+}
 
 /* SECCION HEADER */
 header {
+    padding: 1rem;
     background-color: #1B1717;
-    padding: 1rem 3rem;
     display: flex; 
     justify-content: space-between;
     align-items: center;
@@ -89,7 +94,7 @@ header#header { /* Hago que la página principal tenga fondo de imagen pero sin 
     justify-content: space-between;
     align-items: stretch;
 }
-header#header div {
+header#header>div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -100,18 +105,45 @@ header#header h1 {
     font-weight: 300;
     font-size: 5rem;
 }
+#logo{
+    width: 20%;
+}
+#logo img { /* Hacemos que la imagén se adapte al tamaño del padre */
+    width: 100%;
+    height: 100%;
+}
 #activo {
-    border-bottom: .5rem solid #EEEBDD;
-    border-radius: .5rem;
+    border-bottom: .3rem solid #EEEBDD;
 }
-#logo {
-    width: 40%;
-    height: auto;
+
+/* ----- ICONO DE MENU ----- */
+.bar1, .bar2, .bar3 {
+    width: 45px;
+    height: 7px;
+    background-color: #630000;
+    margin: 6px 0;
+    transition: .4s;
 }
-.navegacion{
+/* MOVIMIENTO DE ICONO MENU */
+.menuHamburguesa.is-active .bar1{
+    transform: translateY(150%) rotate(45deg);
+}
+.menuHamburguesa.is-active .bar2{
+    opacity: 0;
+}
+.menuHamburguesa.is-active .bar3{
+    transform: translateY(-230%) rotate(135deg);
+}
+
+/* ----- MENU NAVEGACION ----- */
+.navegacion {
     list-style: none;
-    display: flex;
-    justify-content: space-between;
+    transform: translate(0px, -150%);
+    transition: transform 1s;
+}
+.navegacion.is_active {
+    transform: translate(0px, 0px);
+    transition: transform 1s;
 }
 .navegacion li a{
     text-decoration: none; 
@@ -120,16 +152,42 @@ header#header h1 {
     font-weight: 700;
     padding-bottom: .5rem;
 }
-.navegacion li a:hover {
-    color: #EEEBDD;
-    transition: 0.5s all; 
+@media (max-width: 768px){ /* Creamos un mq únicamente para la navegacion */
+    .navegacion {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5rem;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(27, 23, 23, .8);
+    }
 }
-.navegacion li {
-    margin-right: 3rem;
+
+@media (min-width: 768px){ /* Media Querie general para el header */
+    #logo {
+        width: 10%;
+    }
+    .menuHamburguesa {
+        display: none; /* Escondemos el ícono de menu */
+    }
+    .navegacion {
+        transform: translate(0px, 0px); /* Reseteamos la posición */
+        display: flex;
+    }
+    .navegacion li a {
+        margin-right: 5rem;
+        font-size: 2.3rem;
+    }
+    .navegacion li:nth-child(5) a {
+        margin-right: 0rem;
+    }
 }
-.navegacion li:nth-child(5){ /* Eliminamos el espacio a la derecha del último elemento */
-    margin-right: 0;
-}
+
 
 /* SECCION FOOTER */
 footer {
@@ -138,7 +196,9 @@ footer {
     padding: 2rem;
     margin-top: 1rem; 
     display: flex;
-    justify-content: space-between;
+    flex-direction: column-reverse;
+    align-items: center;
+    row-gap: 1rem;
 }
 footer p{
     font-size: 1.5rem;
@@ -149,20 +209,28 @@ footer a{
     color: #630000;
     font-size: 2rem;
 }
+@media (min-width: 468px){
+    footer {
+        padding: 2rem;
+        margin-top: 1rem;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
 
 /* ---------- PÁGINA INICIO ---------- */
 
 /* NOVEDADES */
 .novedades {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 2rem; 
+    display: block;
 }
 .novedades div {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.novedades>article {
+    display: none;
 }
 .producto-novedades a img{
     border-radius: 2rem;
@@ -170,29 +238,40 @@ footer a{
     box-shadow: 5px 4px 13px -3px rgba(27,23,23,0.81); 
 }
 
+@media (min-width: 768px){ /* Media Querie general para la seccion novedades */
+    .novedades {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 2rem; 
+    }
+    .novedades>article {
+        display: block; /* Mostramos este articulo solo en pantallas grandes */
+    }
+}
+
 /* NEWSLETTERS */
 .newsletter {
     background-image: url('../img/parallax.jpg');
-    min-height: 35rem;
+    min-height: 42rem;
     background-attachment: fixed; /* Creamos efecto parallax */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 .newsletter div h2{
-    font-size: 4rem;
+    padding-bottom: 1rem;
+    font-size: 3rem;
     text-align: center;
     text-shadow: 2px 2px 2px #1B1717; 
 }
 .form-newsletter {
     text-align: center;
     border-radius: 2rem;
-    width: 60%;
-    padding: 2rem;
     margin: auto;
+    padding: 1rem;
     background-color: rgba(238, 235, 221, .7);
     box-shadow: 5px 10px 13px -3px rgba(27,23,23,0.81);
-    margin-bottom: 2rem;
 }
 .form-newsletter div {
     display: flex;
@@ -205,23 +284,51 @@ footer a{
     color: #1B1717;
 }
 
+@media (min-width: 768px){ /* Media Querie general para la seccion newsletter */
+    .newsletter div h2 {
+        font-size: 4rem;
+    }
+    .form-newsletter {
+        width: 60%;
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
 /* CONOCENOS */
 .seccion-conocenos{
     display: flex;
     justify-content: space-evenly;
+    gap: 2rem;
     align-items: center;
 }
 .seccion-conocenos a img {
+    height: 250px;
+    width: auto;
     border-radius: 1rem;
     box-shadow: 5px 10px 13px -3px rgba(27,23,23,0.81);
-    margin: 1rem 0;
+    margin-bottom: 1rem;
 }
 div#detalles-conocenos h3{
-    margin-bottom: 2rem;
+    margin-bottom: .5rem;
 }
 div#detalles-conocenos p{
     font-size: 1.5rem;
     margin-bottom: 3rem;
+}
+
+@media (min-width: 468px){ /* Media Querie general para la seccion conocenos */
+    .seccion-conocenos a img {
+        height: 300px;
+    }
+}
+@media (min-width: 768px){ 
+    .seccion-conocenos a img {
+        height: 400px;
+    }
+    div#detalles-conocenos h3{
+        margin-bottom: 2rem;
+    }
 }
 
 /* ---------- PÁGINA PRODUCTOS ---------- */
