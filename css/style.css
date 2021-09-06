@@ -1,13 +1,9 @@
 :root { /* Definimos variables */
+    /* Colores */
     --colorPrimario: #D72323;
-    --colorPrimarioLight: #3A4750;
     --colorSecundario: #EEEEEE;
     --colorTerciario: #303841;
-    /* Colores */
-    /* --colorPrimario: #630000;
-    --colorPrimarioLight: #810000;
-    --colorSecundario: #EEEBDD;
-    --colorTerciario: #1B1717; */
+    --colorTerciarioLight: #3A4750;
     /* Letras */
     --textoSmall: 1.2rem;
     --textoMedium: 1.5rem;
@@ -46,7 +42,7 @@ body {
 .btn {
     text-decoration: none;
     border: 2px solid var(--colorPrimario); 
-    padding: 1rem;
+    padding: 1.2rem;
     margin-bottom: 1rem;
     cursor: pointer; 
     font-size: var(--textoSmall);
@@ -64,7 +60,7 @@ body {
     transition: .7s all;
 }
 .detalles h3 {
-    color: var(--colorPrimarioLight);
+    color: var(--colorTerciarioLight);
     font-size: 1.8rem;
     margin: 1rem 0 .3rem 0;
 }
@@ -77,16 +73,19 @@ body {
 .input {
     background-color: var(--colorSecundario);
     color: var(--colorTerciario);
-    border: 2px solid var(--colorPrimarioLight);
+    border: 2px solid var(--colorTerciarioLight);
     border-radius: 1rem;
     width: 50%;
     font-size: var(--textoMedium);
     padding: 5px;
     width: 100%;
+    transition: all .5s;
+}
+.input:focus{
+    transform: scale(1.1);
 }
 @media (min-width: 468px){
     .btn {
-        padding: 1.2rem;
         font-size: var(--textoMedium);
     }
     .detalles h3 {
@@ -112,6 +111,9 @@ body {
     .detalles p{
         margin-bottom: 1rem;
         line-height: 2.2rem;
+    }
+    .input:focus {
+        transform: scale(1);
     }
 }
 
@@ -157,11 +159,17 @@ header#header h1 {
 
 /* ----- ICONO DE MENU ----- */
 .bar1, .bar2, .bar3 {
-    width: 45px;
-    height: 7px;
+    width: 35px;
+    height: 4px;
     background-color: var(--colorPrimario);
     margin: 6px 0;
     transition: .4s;
+}
+.bar2{
+    width: 30px; /* Le damos un estilo diferente */
+}
+.menuHamburguesa {
+    padding: 1rem; /* Hacemos que el click sea más grande */
 }
 /* MOVIMIENTO DE ICONO MENU */
 .menuHamburguesa.is-active .bar1{
@@ -171,7 +179,7 @@ header#header h1 {
     opacity: 0;
 }
 .menuHamburguesa.is-active .bar3{
-    transform: translateY(-230%) rotate(135deg);
+    transform: translateY(-350%) rotate(135deg);
 }
 
 /* ----- MENU NAVEGACION ----- */
@@ -251,8 +259,9 @@ footer {
     padding: 2rem;
     margin-top: 1rem; 
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     row-gap: 2rem;
 }
 footer p{
@@ -263,6 +272,7 @@ footer>a{
     text-decoration: none;
     color: var(--colorPrimario);
     font-size: 2rem;
+    order: -1;
 }
 .redes {
     display: flex;
@@ -272,7 +282,6 @@ footer>a{
     font-size: 2.5rem;
     color: var(--colorSecundario);
     margin-left: 1.5rem;
-    transition: all .5s;
 }
 
 @media (min-width: 468px){
@@ -293,8 +302,12 @@ footer>a{
     footer p{
         font-size: var(--textoMedium);
     }
+    footer>a {
+        order: 0;
+    }
     .redes a{
         font-size: 3rem;
+        transition: all .5s;
     }
     .redes a:hover {
         color: #79776e;
@@ -343,7 +356,7 @@ footer>a{
 /* NEWSLETTERS */
 .newsletter {
     background-image: url('../img/parallax2.jpg');
-    min-height: 42rem;
+    min-height: 45rem;
     background-attachment: fixed; /* Creamos efecto parallax */
     background-size: cover;
     background-position: center;
@@ -376,6 +389,9 @@ footer>a{
 }
 
 @media (min-width: 768px){ /* Media Querie general para la seccion newsletter */
+    .newsletter {
+        min-height: 42rem;
+    }
     .newsletter div h2 {
         font-size: 4rem;
     }
@@ -407,10 +423,16 @@ div#detalles-conocenos p{
     font-size: var(--textoSmall);
     margin-bottom: 3rem;
 }
+div#detalles-conocenos a{
+    font-size: 1rem;
+}
 
 @media (min-width: 468px){ /* Media Querie general para la seccion conocenos */
     .seccion-conocenos a img {
         height: 300px;
+    }
+    div#detalles-conocenos a{
+        font-size: var(--textoSmall);
     }
 }
 @media (min-width: 768px){ 
@@ -426,6 +448,9 @@ div#detalles-conocenos p{
     }
     div#detalles-conocenos h3{
         margin-bottom: 2rem;
+    }
+    div#detalles-conocenos a{
+        font-size: var(--textoMedium);
     }
 }
 
@@ -582,8 +607,8 @@ div.detalles#other-service p {
     flex-direction: column;
 }
 .detalle-contacto {
-    min-height: 600px;
-    min-width: 400px;
+    min-height: 400px;
+    min-width: 300px;
     padding: 3rem;
     border: 1px solid black;
     border-radius: 2rem;
@@ -595,8 +620,8 @@ div.detalles#other-service p {
 .form-contact {
     padding: 3rem;
     border-radius: 2rem;
-    min-height: 600px;
-    min-width: 400px;
+    min-height: 400px;
+    min-width: 300px;
     margin: 3rem 0;
 }
 .form-contact legend {
@@ -611,6 +636,13 @@ div.detalles#other-service p {
     margin-right: 2rem;
     font-weight: bold;
 }
+@media (min-width: 468px){
+    .detalle-contacto,
+    .form-contact {
+        min-width: 400px;
+        min-height: 500px;
+    }
+}
 @media (min-width: 768px){
     .form-contact>div>label {
         font-size: var(--textoMedium);
@@ -618,6 +650,7 @@ div.detalles#other-service p {
     .detalle-contacto,
     .form-contact {
         min-width: 500px;
+        min-height: 600px;
         box-shadow: 5px 10px 13px -3px rgba(27,23,23,0.81);
     }
 }
