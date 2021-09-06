@@ -1,9 +1,13 @@
 :root { /* Definimos variables */
+    --colorPrimario: #D72323;
+    --colorPrimarioLight: #3A4750;
+    --colorSecundario: #EEEEEE;
+    --colorTerciario: #303841;
     /* Colores */
-    --colorPrimario: #630000;
+    /* --colorPrimario: #630000;
     --colorPrimarioLight: #810000;
     --colorSecundario: #EEEBDD;
-    --colorTerciario: #1B1717;
+    --colorTerciario: #1B1717; */
     /* Letras */
     --textoSmall: 1.2rem;
     --textoMedium: 1.5rem;
@@ -182,7 +186,7 @@ header#header h1 {
 }
 .navegacion li a{
     text-decoration: none; 
-    color: var(--colorPrimarioLight);
+    color: var(--colorPrimario);
     font-size: 2rem;
     font-weight: 700;
     padding-bottom: .5rem;
@@ -349,7 +353,7 @@ footer>a{
     padding: 2rem;
     font-size: 3rem;
     text-align: center;
-    color: var(--colorPrimarioLight);
+    color: var(--colorPrimario);
     text-shadow: 2px 2px 2px var(--colorTerciario); 
 }
 .form-newsletter {
@@ -357,7 +361,7 @@ footer>a{
     border-radius: 2rem;
     margin: auto;
     padding: 1rem;
-    background-color: rgba(238, 235, 221, .7);
+    background-color: #eeeeeee0;
     box-shadow: 5px 10px 13px -3px rgba(27,23,23,0.81);
 }
 .form-newsletter div {
