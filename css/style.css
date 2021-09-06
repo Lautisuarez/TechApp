@@ -233,7 +233,7 @@ header#header h1 {
 
 /* SECCION FOOTER */
 footer {
-    background: linear-gradient(90deg, rgba(99,0,0,1) 10%, rgba(238,235,221,1) 50%, rgba(129,0,0,1) 90%);
+    background: #1B1717;
     color: #EEEBDD;
     padding: 2rem;
     margin-top: 1rem; 
