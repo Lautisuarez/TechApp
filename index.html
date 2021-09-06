@@ -13,6 +13,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!-- Animacion AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <header id="header">
@@ -43,7 +45,7 @@
         <h2 class="dark-red">Novedades</h2>
         <div class="novedades">
             <div>
-                <article class="producto-novedades">
+                <article class="producto-novedades" data-aos="fade-up">
                     <a href="#">
                         <img src="./img/perifericos.jpg" alt="Producto de perifericos" width="300" height="250px">
                     </a>
@@ -53,7 +55,7 @@
                         <a class="btn btn-principal" href="#">Ver más</a> 
                     </div>
                 </article>
-                <article class="producto-novedades">
+                <article class="producto-novedades" data-aos="fade-up">
                     <a href="#">
                         <img src="./img/notebook.jpg" alt="Producto de notebook" width="300" height="250px">
                     </a>
@@ -65,7 +67,7 @@
                 </article>
             </div>
             <div>
-                <article class="producto-novedades">
+                <article class="producto-novedades" data-aos="fade-up">
                     <a href="#">
                         <img src="./img/watch.jpg" alt="Producto de reloj inteligente" width="300" height="250px">
                     </a>
@@ -75,7 +77,7 @@
                         <a class="btn btn-principal" href="#">Ver más</a> 
                     </div>
                 </article>
-                <article class="producto-novedades">
+                <article class="producto-novedades" data-aos="fade-up">
                     <a href="#">
                         <img src="./img/auriculares .jpg" alt="Producto de auriculares" width="300" height="250px">
                     </a>
@@ -86,7 +88,7 @@
                     </div>
                 </article>
             </div>
-            <article class="producto-novedades">
+            <article class="producto-novedades" data-aos="fade-up">
                 <a href="#">
                     <img src="./img/drones.jpg" alt="Producto sobre drones" width="350" height="631">
                 </a>
@@ -101,7 +103,7 @@
     <!-- SECCION NEWSLETTERS -->
     <div class="newsletter">
         <div class="contenedor">
-            <h2 class="dark-red">Suscríbete a nuestro newsletter para estar al día</h2>
+            <h2>Suscríbete a nuestro newsletter para estar al día</h2>
             <form action="GET" class="form-newsletter">
                 <div>
                     <label for="email">Correo:</label>
@@ -118,7 +120,7 @@
     <!-- SECCION CONÓCENOS MÁS -->
     <div class="contenedor">
         <h2 class="dark-red">Conócenos más</h2>
-        <div class="seccion-conocenos">
+        <div class="seccion-conocenos" data-aos="fade-up">
             <a href="#">
                 <img src="./img/conocenos.jpg" alt="Foto sobre nosotros">
             </a>
@@ -141,6 +143,12 @@
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script src="./js/script.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

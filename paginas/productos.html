@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!-- Animacion AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <header>
@@ -41,7 +43,7 @@
         <h1 class="dark-red">Productos</h1>
         <div class="productos">
             <div class="detalle-producto">
-                <div class="img-producto">
+                <div class="img-producto" data-aos="flip-left">
                     <a href="#">
                         <img src="../img/iphone12.webp" alt="Producto de iphone">
                     </a>
@@ -55,7 +57,7 @@
                 </div>
             </div>
             <div class="detalle-producto">
-                <div class="img-producto">
+                <div class="img-producto" data-aos="flip-left">
                     <a href="#">
                         <img src="../img/ps5.webp" alt="Producto de una PlayStation5" width="200" height="auto">
                     </a>
@@ -72,7 +74,7 @@
                 </div>
             </div>
             <div class="detalle-producto">
-                <div class="img-producto">
+                <div class="img-producto" data-aos="flip-left">
                     <a href="#">
                         <img src="../img/drone.webp" alt="Producto de un dron DJI" width="200" height="auto">
                     </a>
@@ -88,7 +90,7 @@
                 </div>
             </div>
             <div class="detalle-producto">
-                <div class="img-producto">
+                <div class="img-producto" data-aos="flip-left">
                     <a href="#">
                         <img src="../img/macbook.webp" alt="Producto de macbook pro" width="200" height="auto">
                     </a>
@@ -119,5 +121,10 @@
 
     <!-- JavaScript -->
     <script src="../js/script.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

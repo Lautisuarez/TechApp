@@ -73,7 +73,7 @@ body {
 @media (min-width: 468px){
     .btn {
         padding: 1.2rem;
-        font-size: 1.5;
+        font-size: 1.5rem;
     }
     .detalles h3 {
         font-size: 1.9rem;
@@ -196,6 +196,10 @@ header#header h1 {
 @media (min-width: 768px){ /* Media Querie general para el header */
     #logo {
         width: 10%;
+        transition: all 1s;
+    }
+    #logo:hover{
+        transform: scale(1.2);
     }
     .menuHamburguesa {
         display: none; /* Escondemos el ícono de menu */
@@ -207,6 +211,10 @@ header#header h1 {
     .navegacion li a {
         margin-right: 5rem;
         font-size: 2rem;
+        transition: all .5s;
+    }
+    .navegacion li a:hover{
+        color: #EEEBDD;
     }
     .navegacion li:nth-child(5) a {
         margin-right: 0rem;
@@ -225,7 +233,7 @@ header#header h1 {
 
 /* SECCION FOOTER */
 footer {
-    background-color: #1B1717;
+    background: linear-gradient(90deg, rgba(99,0,0,1) 10%, rgba(238,235,221,1) 50%, rgba(129,0,0,1) 90%);
     color: #EEEBDD;
     padding: 2rem;
     margin-top: 1rem; 
@@ -304,11 +312,17 @@ footer>a{
     .novedades>article {
         display: block; /* Mostramos este articulo solo en pantallas grandes */
     }
+    .producto-novedades a img{
+        transition: transform .5s;
+    }
+    .producto-novedades a img:hover {
+        transform: scale(1.1);
+    }
 }
 
 /* NEWSLETTERS */
 .newsletter {
-    background-image: url('../img/parallax.jpg');
+    background-image: url('../img/parallax2.jpg');
     min-height: 42rem;
     background-attachment: fixed; /* Creamos efecto parallax */
     background-size: cover;
@@ -316,9 +330,10 @@ footer>a{
     background-repeat: no-repeat;
 }
 .newsletter div h2{
-    padding-bottom: 1rem;
+    padding: 2rem;
     font-size: 3rem;
     text-align: center;
+    color: #810000;
     text-shadow: 2px 2px 2px #1B1717; 
 }
 .form-newsletter {
@@ -381,6 +396,10 @@ div#detalles-conocenos p{
 @media (min-width: 768px){ 
     .seccion-conocenos a img {
         height: 400px;
+        transition: transform .5s;
+    }
+    .seccion-conocenos a img:hover {
+        transform: scale(1.1);
     }
     div#detalles-conocenos h3{
         margin-bottom: 2rem;
@@ -544,6 +563,7 @@ div.detalles#other-service p {
     justify-content: space-evenly;
     text-align: center;
     box-shadow: 5px 10px 13px -3px rgba(27,23,23,0.81);
+    
 }
 .form-contact {
     box-shadow: 5px 10px 13px -3px rgba(27,23,23,0.81);
@@ -555,7 +575,7 @@ div.detalles#other-service p {
 }
 .form-contact legend {
     font-size: 2rem;
-    color: #630000;
+    color: #1B1717;
 }
 .form-contact>div {
     margin-bottom: 2rem;
