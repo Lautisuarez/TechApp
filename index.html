@@ -18,9 +18,9 @@
 </head>
 <body>
     <header id="header">
-        <div class="contenedor">
+        <div>
             <a href="./index.html" id="logo">
-                <img src="./img/logo.svg" alt="Logo de techapp">
+                <img src="./img/logo2.svg" alt="Logo de techapp">
             </a>
             <!-- MENÚ DE NAVEGACIÓN -->
             <nav>
@@ -38,7 +38,7 @@
                 <div class="bar3"></div>
             </div>
         </div>
-        <h1>Tech<span class="bold">App</span></h1>
+        <i class="fas fa-sort-down"></i>
     </header>
     <!-- SECCION NOVEDADES -->
     <section class="contenedor">
@@ -143,11 +143,23 @@
         </div>
     </footer>
 
+    <!-- SECCIÓN RECARGA DE PÁGINA -->
+    <div id="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+
     <!-- JavaScript -->
     <script src="./js/script.js"></script>
     <!-- AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
+        /* Código de JavaScript para la recarga de página */
+        var loader = document.getElementById('loader-wrapper');
+        window.addEventListener('load', function(){
+            loader.style.display = 'none';
+        })
+
+        /* Iniciamos las animaciones de AOS */
         AOS.init();
     </script>
 </body>

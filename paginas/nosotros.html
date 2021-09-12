@@ -75,7 +75,19 @@
         </div>
     </footer>
 
+    <!-- SECCIÓN RECARGA DE PÁGINA -->
+    <div id="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+
     <!-- JavaScript -->
-    <script src="../js/script.js"></script>
+    <script src="./js/script.js"></script>
+    <script>
+        /* Código de JavaScript para la recarga de página */
+        var loader = document.getElementById('loader-wrapper');
+        window.addEventListener('load', function(){
+            loader.style.display = 'none';
+        })
+    </script>
 </body>
 </html>

@@ -42,6 +42,7 @@ body {
 .btn {
     text-decoration: none;
     border: 2px solid var(--colorPrimario); 
+    background: none;
     padding: 1.2rem;
     margin-bottom: 1rem;
     cursor: pointer; 
@@ -125,6 +126,12 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+header#header>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
 header#header { /* Hacemos que la página principal tenga fondo de imagen pero sin modificar las demás páginas */
     background-color: transparent;
     background-image: url('../img/slider.jpg');
@@ -133,28 +140,33 @@ header#header { /* Hacemos que la página principal tenga fondo de imagen pero s
     height: 100vh;
     flex-direction: column;
     justify-content: space-between;
-    align-items: stretch;
-}
-header#header>div {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
 }
-header#header h1 {
+header#header i {
     text-align: center;
-    color: var(--colorSecundario);
-    font-weight: 300;
-    font-size: 5rem;
+    color: rgba(215, 35, 35, .6);
+    font-size: 10rem;
+    animation: arrow .8s linear infinite alternate;
+}
+@keyframes arrow { /* Realizamos un pequeño movimiento de arriba hacia abajo en la flecha */
+    from {
+        transform: translateY(-30px);
+    }
+    to {
+        transform: translateY(0px);
+    }
 }
 #logo{
-    width: 15%;
+    width: 25%;
 }
 #logo img { /* Hacemos que la imagén se adapte al tamaño del padre */
     width: 100%;
     height: 100%;
 }
 #activo {
-    border-bottom: .3rem solid var(--colorSecundario);
+    background-color: var(--colorPrimario);
+    color: var(--colorSecundario);
+    border-radius: .5rem;
 }
 
 /* ----- ICONO DE MENU ----- */
@@ -197,8 +209,9 @@ header#header h1 {
     color: var(--colorPrimario);
     font-size: 2rem;
     font-weight: 700;
-    padding-bottom: .5rem;
+    padding: .5rem 1.5rem;
 }
+
 @media (max-width: 768px){ /* Creamos un mq únicamente para la navegacion */
     .navegacion {
         position: absolute;
@@ -214,14 +227,18 @@ header#header h1 {
         background-color: rgba(27, 23, 23, .9);
     }
 }
-
-@media (min-width: 768px){ /* Media Querie general para el header */
+@media (min-width: 468px){
     #logo {
-        width: 10%;
-        transition: all 1s;
+        width: 17%;
     }
-    #logo:hover{
-        transform: scale(1.2);
+}
+@media (min-width: 768px){ /* Media Querie general para el header */
+    header,
+    header#header>div {
+        justify-content: space-around;
+    }
+    #logo {
+        width: 13%;
     }
     .menuHamburguesa {
         display: none; /* Escondemos el ícono de menu */
@@ -231,30 +248,58 @@ header#header h1 {
         display: flex;
     }
     .navegacion li a {
-        margin-right: 5rem;
-        transition: all .5s;
-    }
-    .navegacion li a:hover{
-        color: var(--colorSecundario);
+        margin-right: 1.5rem;
+        position: relative;
+        transition: color .4s linear;
     }
     .navegacion li:nth-child(5) a {
         margin-right: 0rem;
     }
+    .navegacion li a::before,
+    .navegacion li a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 0%;
+        z-index: -1;
+        box-sizing: border-box;
+        border-radius: .5rem;
+    }
+    .navegacion li a::before{
+        bottom: 0;
+        border-radius: .5rem;
+        border-left: 2px solid var(--colorPrimario);
+        border-right: 2px solid var(--colorPrimario);
+        transition: .3s linear;
+    }
+    .navegacion li a::after{
+        top: 0;
+        background-color: var(--colorPrimario);
+        transition: .3s linear .3s;
+    }
+    .navegacion li  a:hover::before,
+    .navegacion li  a:hover::after{
+        height: 100%;
+    }
+    .navegacion li a:hover {
+        color: var(--colorSecundario);
+    }
 }
 @media (min-width: 1024px){
     #logo {
-        width: 8%;
+        width: 7%;
     }
     .navegacion li a {
-        margin-right: 5rem;
         font-size: 2.3rem;
+        margin-right: 5rem;
     }
 }
 
 
 /* SECCION FOOTER */
 footer {
-    background: var(--colorTerciario);
+    background: var(--colorTerciario); 
     color: var(--colorSecundario);
     padding: 2rem;
     margin-top: 1rem; 
@@ -659,3 +704,76 @@ div.detalles#other-service p {
         flex-direction: row;
     }
 }
+
+/* SECCIÓN RECARGA DE PÁGINA */
+#loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--colorTerciario);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #Fff;
+    animation: loader 2s infinite ease;
+  }
+  
+  .loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
+  }
+  
+  @keyframes loader {
+    0% {
+      transform: rotate(0deg);
+    }
+    
+    25% {
+      transform: rotate(180deg);
+    }
+    
+    50% {
+      transform: rotate(180deg);
+    }
+    
+    75% {
+      transform: rotate(360deg);
+    }
+    
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes loader-inner {
+    0% {
+      height: 0%;
+    }
+    
+    25% {
+      height: 0%;
+    }
+    
+    50% {
+      height: 100%;
+    }
+    
+    75% {
+      height: 100%;
+    }
+    
+    100% {
+      height: 0%;
+    }
+  }
