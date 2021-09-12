@@ -1,5 +1,5 @@
-// selector
-var menu = document.querySelector('.menuHamburguesa');
+var menu = document.querySelector('.menuHamburguesa'); // selector
+var loader = document.getElementById('loader-wrapper'); // recarga
 
 // method
 function toggleMenu (event) {
@@ -10,3 +10,6 @@ function toggleMenu (event) {
 
 // event
 menu.addEventListener('click', toggleMenu, false);
+window.addEventListener('load', function(){
+    loader.style.display = 'none';
+})
