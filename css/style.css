@@ -374,12 +374,12 @@ footer>a{
 .novedades>article {
     display: none;
 }
-.producto-novedades a img{
+.producto-novedades button img,
+.modal-boot-description img{
     border-radius: 2rem;
     border: 1px outset var(--colorTerciario);
     box-shadow: 5px 4px 13px -3px rgba(27,23,23,0.81); 
 }
-
 @media (min-width: 768px){ /* Media Querie general para la seccion novedades */
     .novedades {
         display: flex;
@@ -390,12 +390,26 @@ footer>a{
     .novedades>article {
         display: block; /* Mostramos este articulo solo en pantallas grandes */
     }
-    .producto-novedades a img{
+    .producto-novedades button img{
         transition: transform .5s;
     }
-    .producto-novedades a img:hover {
+    .producto-novedades button img:hover {
         transform: scale(1.1);
     }
+}
+
+/* Modales */
+.modal-boot {
+    margin: 0 auto;
+}
+.modal-boot-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+}
+.producto-novedades button{
+    border: none;
 }
 
 /* NEWSLETTERS */
@@ -502,47 +516,15 @@ div#detalles-conocenos a{
 /* ---------- PÁGINA PRODUCTOS ---------- */
 
 /* PRODUCTOS */
-.productos {
-    display: grid;
-    grid-template-rows: auto;
-    row-gap: 2rem;
-}
-.detalle-producto{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    column-gap: 2rem;
-    justify-items: center;
-    align-items: center;
-}
-.detalle-producto .detalles {
-    max-width: 70rem; /* Establecemos un tamaño horizontal máximo */
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 2fr 1fr;
-    align-items: center;
-}
 .img-producto>a>img {
     border-radius: 2rem;
     width: 150px;
     height: auto;
 }
 
-.detalle-producto .detalles h3{
-    grid-area: 1 / 1 / 1 / 4;
-}
-.detalle-producto .detalles p {
-    grid-area: 2 / 1 / 2 / 4;
-}
-.detalle-producto .detalles a {
-    grid-area: 3 / 1 / 3 / 4;
-}
-
 @media (min-width: 768px){ /* Media Querie general para la pagina productos */
     .img-producto>a>img {
         width: 200px;
-    }
-    .detalle-producto .detalles a {
-        grid-area: 3 / 3 / 3 / 4;
     }
 }
 
