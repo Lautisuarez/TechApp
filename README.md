@@ -13,7 +13,7 @@ git clone https://github.com/Lautisuarez/TechApp.git
 
 ## Construido con 🛠️
 * HTML5
-* CSS puro
+* CSS (SASS)
 * JavaScript
 
 ## Autor ✒️
