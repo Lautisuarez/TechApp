@@ -6,7 +6,7 @@ $color-terciario: #303841;
 $color-terciario-light: #3A4750;
 // Tamaños 
 $txt-small: 1.2rem;
-$txt-Medium: 1.5rem;
+$txt-Medium: $txt-small*1.2;
 // Tipografía
 $font: 'Roboto', sans-serif;
 // Shadows

@@ -8,11 +8,14 @@
     > article {
         display: none;
     }
+    &-producto button{
+        border: none;
+    }
 }
 .modal-content {
     box-shadow: $shadow;
 }
-.producto-novedades button img,
+.novedades-producto button img,
 .modal-boot-description img{
     border-radius: 2rem;
     border: 1px outset $color-terciario;
@@ -27,9 +30,6 @@
         row-gap: 2rem;
     }
 }
-.producto-novedades button {
-    border: none;
-}
 
 /* Media Queries */
 @media (min-width: 768px){ 
@@ -39,11 +39,11 @@
         > article {
             display: block; /* Mostramos este articulo solo en pantallas grandes */
         }
-    }
-    .producto-novedades button img{
-        transition: transform .5s;
-        &:hover {
-            transform: scale(1.1);
+        &-producto button img{
+            transition: transform .5s;
+            &:hover {
+                transform: scale(1.1);
+            }
         }
     }
 }

@@ -63,7 +63,7 @@
   color: #303841;
   border: 2px solid #3A4750;
   border-radius: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.44rem;
   padding: .5rem;
   width: 100%;
   -webkit-transition: .5s all;
@@ -78,13 +78,13 @@
 /* Media Queries */
 @media (min-width: 468px) {
   .btn {
-    font-size: 1.5rem;
+    font-size: 1.44rem;
   }
   .detalles h3 {
     font-size: 1.9rem;
   }
   .detalles p {
-    font-size: 1.5rem;
+    font-size: 1.44rem;
   }
 }
 
@@ -175,7 +175,7 @@
   color: #303841;
   border: 2px solid #3A4750;
   border-radius: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.44rem;
   padding: .5rem;
   width: 100%;
   -webkit-transition: .5s all;
@@ -190,13 +190,13 @@
 /* Media Queries */
 @media (min-width: 468px) {
   .btn {
-    font-size: 1.5rem;
+    font-size: 1.44rem;
   }
   .detalles h3 {
     font-size: 1.9rem;
   }
   .detalles p {
-    font-size: 1.5rem;
+    font-size: 1.44rem;
   }
 }
 
@@ -709,7 +709,7 @@ footer > a {
         flex-wrap: wrap;
   }
   footer p {
-    font-size: 1.5rem;
+    font-size: 1.44rem;
   }
   footer > a {
     -webkit-box-ordinal-group: 1;
@@ -757,12 +757,16 @@ footer > a {
   display: none;
 }
 
+.novedades-producto button {
+  border: none;
+}
+
 .modal-content {
   -webkit-box-shadow: 5px 4px 13px -3px rgba(27, 23, 23, 0.81);
           box-shadow: 5px 4px 13px -3px rgba(27, 23, 23, 0.81);
 }
 
-.producto-novedades button img,
+.novedades-producto button img,
 .modal-boot-description img {
   border-radius: 2rem;
   border: 1px outset #303841;
@@ -794,10 +798,6 @@ footer > a {
   row-gap: 2rem;
 }
 
-.producto-novedades button {
-  border: none;
-}
-
 /* Media Queries */
 @media (min-width: 768px) {
   .novedades {
@@ -822,13 +822,13 @@ footer > a {
     display: block;
     /* Mostramos este articulo solo en pantallas grandes */
   }
-  .producto-novedades button img {
+  .novedades-producto button img {
     -webkit-transition: -webkit-transform .5s;
     transition: -webkit-transform .5s;
     transition: transform .5s;
     transition: transform .5s, -webkit-transform .5s;
   }
-  .producto-novedades button img:hover {
+  .novedades-producto button img:hover {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
   }
@@ -966,7 +966,7 @@ div#detalles-conocenos p {
             transform: scale(1.1);
   }
   div#detalles-conocenos p, div#detalles-conocenos a {
-    font-size: 1.5rem;
+    font-size: 1.44rem;
   }
   div#detalles-conocenos h3 {
     margin-bottom: 2rem;
@@ -1061,7 +1061,7 @@ div.detalles#other-service p {
 @media (min-width: 768px) {
   .form-service > div > label,
   div#detalle-service div label {
-    font-size: 1.5rem;
+    font-size: 1.44rem;
   }
   div.right input {
     width: 40%;
@@ -1233,7 +1233,7 @@ div.detalles#other-service p {
 
 @media (min-width: 768px) {
   .form-contact > div > label {
-    font-size: 1.5rem;
+    font-size: 1.44rem;
   }
   .contacto-detalle,
   .form-contact {
