@@ -1,0 +1,136 @@
+/* ---------- PÁGINA INICIO ---------- */
+/* ----- SECCIÓN NOVEDADES ----- */
+.novedades {
+    display: block;
+    div {
+        @include flex(true, column);
+    }
+    > article {
+        display: none;
+    }
+}
+.modal-content {
+    box-shadow: $shadow;
+}
+.producto-novedades button img,
+.modal-boot-description img{
+    border-radius: 2rem;
+    border: 1px outset $color-terciario;
+    box-shadow: $shadow; 
+}
+
+/* Modales */
+.modal-boot {
+    margin: 0 auto;
+    &-description {
+        @include flex(true, column);
+        row-gap: 2rem;
+    }
+}
+.producto-novedades button {
+    border: none;
+}
+
+/* Media Queries */
+@media (min-width: 768px){ 
+    .novedades {
+        @include flex(true, row, space-evenly);
+        gap: 2rem; 
+        > article {
+            display: block; /* Mostramos este articulo solo en pantallas grandes */
+        }
+    }
+    .producto-novedades button img{
+        transition: transform .5s;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+/* ----- SECCIÓN NEWSLETTERS ----- */
+.newsletter {
+    @include img('parallax2.jpg', fixed);
+    min-height: 45rem;
+    div h2 {
+        padding: 2rem;
+        font-size: 3rem;
+        text-align: center;
+        color: $color-primario;
+        text-shadow: $txt-shadow;
+    }
+}
+.form-newsletter {
+    text-align: center;
+    border-radius: 2rem;
+    margin: auto;
+    padding: 1rem;
+    background-color: #eeeeeee0;
+    box-shadow: $shadow;
+    div {
+        @include flex(true, column);
+        margin: 2rem 0;
+        label {
+            font-size: 2rem;
+            color: $color-terciario;
+        }
+    }
+}
+/* Media Queries */
+@media (min-width: 768px){ 
+    .newsletter {
+        min-height: 42rem;
+        div h2 {
+            font-size: 4rem;
+        }
+    }
+    .form-newsletter {
+        width: 60%;
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/* ----- SECCIÓN CONOCENOS ----- */
+.seccion-conocenos {
+    @include flex(true, row, space-evenly);
+    gap: 2rem;
+    a img {
+        height: 250px;
+        width: auto;
+        border-radius: 1rem;
+        box-shadow: $shadow;
+        margin-bottom: 1rem;
+    }
+}
+div#detalles-conocenos {
+    h3 { margin-bottom: .5rem; }
+    a { font-size: 1rem; }
+    p {
+        font-size: $txt-small;
+        margin-bottom: 3rem;
+    }
+}
+
+/* Media Queries */
+@media (min-width: 468px){
+    .seccion-conocenos a img {
+        height: 300px;
+    }
+    div#detalles-conocenos a{
+        font-size: $txt-small;
+    }
+}
+@media (min-width: 768px){ 
+    .seccion-conocenos a img {
+        height: 400px;
+        transition: transform .5s;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    div#detalles-conocenos {
+        p, a { font-size: $txt-Medium; }
+        h3 { margin-bottom: 2rem; }
+    }
+}

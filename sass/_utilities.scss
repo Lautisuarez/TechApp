@@ -1,0 +1,169 @@
+/* ---------- UTILIDADES ---------- */
+.dark-red {
+    color: $color-primario;
+    font-size: 2.5rem;
+    padding: 3rem 0;
+}
+.bold {
+    font-weight: 800;
+}
+.right {
+    text-align: right;
+}
+.contenedor { 
+    width: 90%;
+    max-width: 150rem;
+    margin: 0 auto;
+}
+.btn {
+    @include border($color-primario);
+    text-decoration: none;
+    background: none;
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    font-size: $txt-small;
+    border-radius: 1rem;
+    text-align: center;
+    &.btn-principal {
+        background-color: $color-primario;
+        color: $color-secundario;
+        transition: .7s all;
+        &:hover {
+            background-color: $color-secundario;
+            color: $color-primario;
+            @include border($color-primario);
+        }
+    }
+}
+.detalles {
+    h3 {
+        color: $color-terciario-light;
+        font-size: 1.8rem;
+        margin: 1rem 0 .3rem 0
+    }
+    p {
+        color: $color-terciario;
+        font-size: $txt-small;
+        margin-bottom: 1rem;
+        line-height: 2rem;
+    }
+}
+.input {
+    background-color: $color-secundario;
+    color: $color-terciario;
+    @include border($color-terciario-light);
+    border-radius: 1rem;
+    font-size: $txt-Medium;
+    padding: .5rem;
+    width: 100%;
+    transition: .5s all;
+    &:focus { 
+        transform: scale(1.1); 
+    }
+}
+/* Media Queries */
+@media (min-width: 468px){
+    .btn { font-size: $txt-Medium }
+    .detalles {
+        h3 { font-size: 1.9rem; }
+        p { font-size: $txt-Medium }
+    }
+}
+@media (min-width: 768px){
+    .dark-red { font-size: 3rem; }
+    .contenedor { width: 95%; }
+    .btn { margin-bottom: 2rem; }
+    .detalles {
+        h3 { font-size: 2rem; }
+        p { 
+            margin-bottom: 1rem;
+            line-height: 2.2rem;
+        }
+    }
+    .input:focus { transform: scale(1); }
+}/* ---------- UTILIDADES ---------- */
+.dark-red {
+    color: $color-primario;
+    font-size: 2.5rem;
+    padding: 3rem 0;
+}
+.bold {
+    font-weight: 800;
+}
+.right {
+    text-align: right;
+}
+.contenedor { 
+    width: 90%;
+    max-width: 150rem;
+    margin: 0 auto;
+}
+.btn {
+    @include border($color-primario);
+    text-decoration: none;
+    background: none;
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    font-size: $txt-small;
+    border-radius: 1rem;
+    text-align: center;
+    &.btn-principal {
+        background-color: $color-primario;
+        color: $color-secundario;
+        transition: .7s all;
+        &:hover {
+            background-color: $color-secundario;
+            color: $color-primario;
+            @include border($color-primario);
+        }
+    }
+}
+.detalles {
+    h3 {
+        color: $color-terciario-light;
+        font-size: 1.8rem;
+        margin: 1rem 0 .3rem 0
+    }
+    p {
+        color: $color-terciario;
+        font-size: $txt-small;
+        margin-bottom: 1rem;
+        line-height: 2rem;
+    }
+}
+.input {
+    background-color: $color-secundario;
+    color: $color-terciario;
+    @include border($color-terciario-light);
+    border-radius: 1rem;
+    font-size: $txt-Medium;
+    padding: .5rem;
+    width: 100%;
+    transition: .5s all;
+    &:focus { 
+        transform: scale(1.1); 
+    }
+}
+/* Media Queries */
+@media (min-width: 468px){
+    .btn { font-size: $txt-Medium }
+    .detalles {
+        h3 { font-size: 1.9rem; }
+        p { font-size: $txt-Medium }
+    }
+}
+@media (min-width: 768px){
+    .dark-red { font-size: 3rem; }
+    .contenedor { width: 95%; }
+    .btn { margin-bottom: 2rem; }
+    .detalles {
+        h3 { font-size: 2rem; }
+        p { 
+            margin-bottom: 1rem;
+            line-height: 2.2rem;
+        }
+    }
+    .input:focus { transform: scale(1); }
+}

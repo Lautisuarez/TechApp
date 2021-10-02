@@ -1,0 +1,14 @@
+/* ---------- PÁGINA PRODUCTOS ---------- */
+/* ----- PRODUCTOS ------ */
+.img-producto > a > img {
+    border-radius: 2rem;
+    width: 150px;
+    height: auto;
+}
+
+/* Media Queries */
+@media (min-width: 768px){
+    .img-producto > a > img {
+        width: 200px;
+    }
+}

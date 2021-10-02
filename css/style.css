@@ -76,7 +76,6 @@ body {
     color: var(--colorTerciario);
     border: 2px solid var(--colorTerciarioLight);
     border-radius: 1rem;
-    width: 50%;
     font-size: var(--textoMedium);
     padding: 5px;
     width: 100%;
@@ -374,6 +373,9 @@ footer>a{
 .novedades>article {
     display: none;
 }
+.modal-content {
+    box-shadow: 5px 4px 13px -3px rgba(27,23,23,0.81); 
+}
 .producto-novedades button img,
 .modal-boot-description img{
     border-radius: 2rem;
@@ -633,7 +635,7 @@ div.detalles#other-service p {
     align-items: center;
     flex-direction: column;
 }
-.detalle-contacto {
+.contacto-detalle {
     min-height: 400px;
     min-width: 300px;
     padding: 3rem;
@@ -664,7 +666,7 @@ div.detalles#other-service p {
     font-weight: bold;
 }
 @media (min-width: 468px){
-    .detalle-contacto,
+    .contacto-detalle,
     .form-contact {
         min-width: 400px;
         min-height: 500px;
@@ -674,7 +676,7 @@ div.detalles#other-service p {
     .form-contact>div>label {
         font-size: var(--textoMedium);
     }
-    .detalle-contacto,
+    .contacto-detalle,
     .form-contact {
         min-width: 500px;
         min-height: 600px;

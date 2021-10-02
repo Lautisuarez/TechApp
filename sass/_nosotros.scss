@@ -1,0 +1,32 @@
+/* ---------- PÁGINA NOSOTROS ---------- */
+/* ----- NOSOTROS ----- */
+.nosotros {
+    @include flex(true, row, space-evenly, no-wrap);
+    margin: 12rem 0;
+    img { display: none; }
+    > div {
+        @include flex(true, column);
+        row-gap: 2rem;
+        #detalle-nosotros {
+            @include flex(true, column, space-evenly, $align: flex-start);
+            row-gap: 3rem;
+        }
+        > div.detalles {
+            text-align: center;
+        }
+    }
+}
+
+/* Media Queries */
+@media (min-width: 768px){
+    .nosotros>div #detalle-nosotros {
+        flex-direction: row;
+        column-gap: 3rem;
+    }
+}
+@media (min-width: 1024px){
+    .nosotros img {
+        border-radius: 2rem;
+        display: block;
+    }
+}
