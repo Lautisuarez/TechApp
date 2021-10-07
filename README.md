@@ -20,4 +20,4 @@ git clone https://github.com/Lautisuarez/TechApp.git
 **Lautaro Suárez** - [Github](https://github.com/Lautisuarez)
 
 ## Captura de pantalla 📸
-<img src="/screenshot.png"></img>
+<img src="/Screenshot.png"></img>
