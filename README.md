@@ -18,3 +18,6 @@ git clone https://github.com/Lautisuarez/TechApp.git
 
 ## Autor ✒️
 **Lautaro Suárez** - [Github](https://github.com/Lautisuarez)
+
+## Captura de pantalla 📸
+<img src="/screenshot.png"></img>
