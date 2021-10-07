@@ -52,6 +52,7 @@
 .newsletter {
     @include img('parallax2.jpg', fixed);
     min-height: 45rem;
+    padding: 4rem;
     div h2 {
         padding: 2rem;
         font-size: 3rem;
@@ -61,23 +62,25 @@
     }
 }
 .form-newsletter {
-    text-align: center;
+    text-align: end;
     border-radius: 2rem;
     margin: auto;
-    padding: 1rem;
+    padding: 1rem 3rem;
     background-color: #eeeeeee0;
     box-shadow: $shadow;
     div {
         @include flex(true, column);
+        align-items: flex-start;
         margin: 2rem 0;
         label {
             font-size: 2rem;
+            font-weight: 500;
             color: $color-terciario;
         }
     }
 }
 /* Media Queries */
-@media (min-width: 768px){ 
+@media (min-width: 768px){
     .newsletter {
         min-height: 42rem;
         div h2 {

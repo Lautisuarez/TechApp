@@ -59,41 +59,39 @@
                 </div>
             </div>
             <div>
-                <form action="GET">
-                    <fieldset class="form-contact">
-                        <legend>Llene el formulario para contactarnos</legend>
-                        <div>
-                            <label for="nombre">Nombre:</label>
-                            <input type="text" name="nombre" id="nombre" class="input" placeholder="Nombre">
-                        </div>
-                        <div>
-                            <label for="tel">Teléfono:</label>
-                            <input type="tel" name="tel" id="tel" class='input' placeholder="Teléfono" required>
-                        </div>
-                        <div>
-                            <label for="email">Correo:</label>
-                            <input type="email" name="email" id="email" class="input" placeholder="E-mail" required>
-                        </div>
-                        <div>
-                            <label for="pais">País:</label>
-                            <select name="pais" id="pais" required>
-                                <option value="">-- Seleccione uno --</option>
-                                <option value="arg">Argentina</option>
-                                <option value="br">Brasil</option>
-                                <option value="chi">Chile</option>
-                                <option value="uru">Uruguay</option>
-                                <option value="otro">Otro</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="msg">Mensaje:</label>
-                            <textarea placeholder="Mensaje" name="msg" class="input" id="msg" cols="20" rows="5" required></textarea>
-                        </div>
-                        <div>
-                            <input type="submit" value="Enviar" class="btn btn-principal">
-                            <input type="reset" value="Limpiar" class="btn btn-principal">
-                        </div>
-                    </fieldset>
+                <form action="GET" class="form-contact">
+                    <h2>Llene el formulario para contactarnos</h2>
+                    <div>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" name="nombre" id="nombre" class="input" placeholder="Nombre">
+                    </div>
+                    <div>
+                        <label for="tel">Teléfono:</label>
+                        <input type="tel" name="tel" id="tel" class='input' placeholder="Teléfono" required>
+                    </div>
+                    <div>
+                        <label for="email">Correo:</label>
+                        <input type="email" name="email" id="email" class="input" placeholder="E-mail" required>
+                    </div>
+                    <div>
+                        <label for="pais">País:</label>
+                        <select name="pais" id="pais" required>
+                            <option value="">-- Seleccione uno --</option>
+                            <option value="arg">Argentina</option>
+                            <option value="br">Brasil</option>
+                            <option value="chi">Chile</option>
+                            <option value="uru">Uruguay</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="msg">Mensaje:</label>
+                        <textarea placeholder="Mensaje" name="msg" class="input" id="msg" cols="20" rows="5" required></textarea>
+                    </div>
+                    <div>
+                        <input type="submit" value="Enviar" class="btn btn-principal">
+                        <input type="reset" value="Limpiar" class="btn btn-principal">
+                    </div>
                 </form>
             </div>
         </div>

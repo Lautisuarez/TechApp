@@ -12,7 +12,7 @@
     // $justify = Establece la posición del justify-content, por defecto es space-between
     // $wrap = Establece si no es necesario hacer wrap, ya que por defecto es wrap
     @if $status {
-        display: flex;    
+        display: flex;
     }
     flex-direction: $direction;
     justify-content: $justify;
@@ -28,4 +28,21 @@
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: $att;
+}
+
+@mixin box-form() {
+    // Hacemos un efecto de dejar la caja flotando
+    box-shadow: $shadow-center;
+    border-radius: 2rem;
+    padding: 3rem;
+    min-height: 400px;
+    min-width: 300px;
+    @media (min-width: 468px){
+        min-height: 400px;
+        min-width: 400px;
+    }
+    @media (min-width: 768px){
+        min-height: 700px;
+        min-width: 550px;
+    }
 }

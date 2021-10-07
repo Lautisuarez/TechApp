@@ -1,19 +1,30 @@
 /* ---------- PÁGINA SERVICIOS ---------- */
 /* ----- SERVICIOS ----- */
-.service {
-    margin: 2rem auto;
-}
 .form-service {
+    @include box-form();
     width: 30rem;
-    margin: 3rem auto;
+    margin: 5rem auto;
     div {
         margin: 1rem 0;
         &#type-service {
             @include flex(true, column, $align: flex-start);
-            div {
-                @include flex(true, row, space-evenly) 
+            > div {
+                width: 100%;
+                @include flex(true, row, space-evenly);
+                > div {
+                    margin-right: 1.8rem;
+                    > label {
+                        font-size: $txt-small;
+                    }
+                }
             }
         }
+    }
+    select {
+        border-radius: 2rem;
+        border: 2px solid $color-primario;
+        background-color: $color-secundario;
+        color: $color-terciario;
     }
     > div > label {
         font-size: $txt-small;
