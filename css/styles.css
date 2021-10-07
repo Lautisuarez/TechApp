@@ -310,6 +310,13 @@ header#header > div {
   width: 100%;
 }
 
+header#header h1 {
+  color: #D72323;
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+}
+
 header#header i {
   text-align: center;
   color: rgba(215, 35, 35, 0.6);
@@ -438,6 +445,9 @@ header#header i {
   header#header > div {
     -ms-flex-pack: distribute;
         justify-content: space-around;
+  }
+  header#header h1 {
+    font-size: 4rem;
   }
   #logo {
     width: 13%;
