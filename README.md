@@ -4,7 +4,7 @@ _Desarrollado como proyecto personal._
 **Comision 22550**
 
 ## Sitio web 🌐
-<a href="https://lautisuarez.github.io/TechApp/" target="_blank">TechApp</a>
+<a href="https://techapp-site.000webhostapp.com/" target="_blank">TechApp</a>
 
 ## Como editarlo ✏️
 ```
@@ -19,5 +19,5 @@ git clone https://github.com/Lautisuarez/TechApp.git
 ## Autor ✒️
 **Lautaro Suárez** - [Github](https://github.com/Lautisuarez)
 
-## Captura de pantalla 📸
+## Captura 📸
 <img src="/Screenshot.png"></img>
