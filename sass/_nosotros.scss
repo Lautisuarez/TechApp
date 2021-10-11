@@ -13,6 +13,11 @@
         }
         > div.detalles {
             text-align: center;
+            p {
+                width: 70%;
+                margin: 3rem auto;
+                line-height: 2;
+            }
         }
     }
 }

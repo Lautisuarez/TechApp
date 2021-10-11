@@ -1079,6 +1079,12 @@ div.detalles#other-service p {
   text-align: center;
 }
 
+.nosotros > div > div.detalles p {
+  width: 70%;
+  margin: 3rem auto;
+  line-height: 2;
+}
+
 /* Media Queries */
 @media (min-width: 768px) {
   .nosotros > div #detalle-nosotros {
